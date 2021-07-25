@@ -1,14 +1,43 @@
+/*1em=16px*/
+
 :root {
   --primary-color: #ff6c00; /* Основной цвет сайта используется длякнопок и рамочек*/
   --secondary-color: #191c26;
 
   --text-primary: #303030;
   --text-secondary: #9da4bd;
+  --text-primary-lighten: #555555;
 }
 
 body {
   font-family: "Open Sans", Arial, sans-serif;
 }
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*ссылки не наследуют font-family*/
+/*flex даеться родителю*/
+/*inline-block для даеться дочерних елементов*/
+a {
+  text-decoration: none;
+}
+
+.suptitle-primary,
+.suptitle-secondary {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  color: var(--text-primary);
+}
+
+.suptitle-secondary {
+  color: #9da4bd99;
+  text-transform: uppercase;
+}
+
 h2.section-title {
   font-family: "Raleway";
   font-weight: 700;
@@ -17,4 +46,103 @@ h2.section-title {
 }
 h2.section-title.lighten {
   color: #fff;
+}
+
+.hero-description {
+  color: var(--text-secondary);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+}
+/*Navbar styles here*/
+
+.navbar {
+  outline: 2px solid skyblue;
+}
+
+.btn-box {
+  display: inline-block;
+}
+.nav-links {
+  background-color: aquamarine;
+  display: inline-block;
+}
+.nav-links li {
+  display: inline-block;
+}
+
+a.nav-link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+
+  color: #ffffff;
+}
+a.nav-link:hover,
+.social-link:hover {
+  color: var(--primary-color);
+}
+
+p.section-description {
+  /* font-family: Open Sans;
+  font-style: normal;*/
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  /* or 186% */
+  letter-spacing: 0.02em;
+  color: var(--text-primary-lighten);
+}
+.social-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  color: var(--text-primary);
+}
+.primary-btn {
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  border: 1px solid #ff6c00;
+  box-sizing: border-box;
+  border-radius: 25px;
+  color: #ffffff;
+}
+.primary-btn + .darken {
+  color: var(--text-primary);
+}
+/*price styles*/
+
+.price-list {
+  display: inline-block;
+}
+.price-item p,
+.price-item span {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 30px;
+
+  color: var(--text-secondary);
+}
+/* Why us styles*/
+.number-box p,
+.number-box span {
+  display: block;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 57px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+}
+.number-box span {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  text-align: center;
 }
